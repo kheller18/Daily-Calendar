@@ -2,6 +2,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 textarea{
@@ -11,8 +13,9 @@ textarea{
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
-  background-color: green;
+  background-color: lightgray;
   width: 900px;
+  
 }
 
 .jumbotron {
@@ -25,6 +28,12 @@ textarea{
 
 .container {
   margin-bottom: 10px;
+  width: 100%;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: (3, 1fr);
 }
 
 .description{
@@ -39,7 +48,10 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
+  margin-right: auto;
+  margin-left: auto;
+  
 }
 
 .hour {
@@ -68,7 +80,7 @@ textarea{
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #06AED5 !important;
   color: white;
   
 }
