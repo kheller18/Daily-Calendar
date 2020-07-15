@@ -20,17 +20,21 @@
 
 //console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
-
-
 $(document).ready(function() {
     let date = moment().format("MMMM Do YYYY");
     let time = moment().format("h:mm:ss a");
+    var save;
 
     function getTime() {
         console.log(time);
         console.log(date);
         $("#currentDay").text(date);
     }
-    
+
+    $(".saveBtn").on("click", function() {
+        save = $(this).val();
+        console.log(save);
+    })
+
     getTime();
 });
