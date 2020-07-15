@@ -23,18 +23,39 @@
 $(document).ready(function() {
     let date = moment().format("MMMM Do YYYY");
     let time = moment().format("h:mm:ss a");
+    let hours = moment().format("HH");
+    let event;
+    let correlation = [9, 10, 11, 12, 13, 14, 15, 16, 17];
     var save;
 
+    // gets current time in user timezone
     function getTime() {
         console.log(time);
         console.log(date);
+        console.log(hours)
         $("#currentDay").text(date);
     }
 
+    function setBackground() {
+        getTime();
+        if (correlation.includes(hours)) {
+            event = $(".event").val(hours);
+            console.log(event);
+            console.log("hey");
+        } else {
+            $(".event").addClass("past");
+            console.log("yo");
+        }
+    }
+
+    // handles submit
     $(".saveBtn").on("click", function() {
+        // get text inside textbox
         save = $(this).val();
         console.log(save);
     })
 
-    getTime();
+
+    setBackground();
+  //  getTime();
 });
