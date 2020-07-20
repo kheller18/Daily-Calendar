@@ -1,3 +1,23 @@
+/*
+    function to get users time-zone
+        done
+
+    function to get current date and time
+        store date and print to top of page
+        store time
+
+    function to get calendar input values from local memory
+        store values to an array
+
+    function to display correct colors
+        get time from other function
+            display gray background for past
+            display red background for current
+            display green background for future
+
+    function to save values and store them in local memory
+*/
+
 # 05 Third-Party APIs: Work Day Scheduler
 
 Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
