@@ -1,66 +1,19 @@
-/*
-    function to get users time-zone
-        done
+Purpose: The purpose of this app is to store daily events in a calendar.  
 
-    function to get current date and time
-        store date and print to top of page
-        store time
+How it works:
+    The application opens, displays todays date, get's the time of the users location, and has time blocks for each hour of the work day.  The time blocks' background color is generated via this key:
+        current hour: red
+        previous hours: grey
+        future hours: green
 
-    function to get calendar input values from local memory
-        store values to an array
+    The user is able to input calendar events and save them with a corresponding button.  When the user closes the webpage and reopens,
+    the saved calendar events will appear.
 
-    function to display correct colors
-        get time from other function
-            display gray background for past
-            display red background for current
-            display green background for future
+    The application runs on a continuous timer that will update background colors based on conditional statements.
 
-    function to save values and store them in local memory
-*/
+    When a new day is detected, the calendar wipes clean (local storage is deleted).
 
-# 05 Third-Party APIs: Work Day Scheduler
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
-
-## User Story
-
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+See attached screenshot (daily-calendar-screenshot-1209am) in "assets"  for a view of the calendar.
+    info: taken at 1209am.
+    background color: green, all events are upcoming for the day.

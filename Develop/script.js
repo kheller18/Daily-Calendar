@@ -10,6 +10,7 @@ $(document).ready(function() {
     let events = [{"9": ""}, {"10": ""}, {"11": ""}, {"12": ""}, {"13": ""}, {"14": ""}, {"15": ""}, {"16": ""}, {"17": ""}];
     var index;
     let correlation = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+    let greenHours = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     const eventIds = ["#9", "#10", "#11", "#12", "#13", "#14", "#15", "#16", "#17"];
     var save;
 
@@ -49,6 +50,8 @@ $(document).ready(function() {
                 $(eventIds[z]).addClass("future");
             }
             $(eventIds[index]).addClass("present");
+        } else if (greenHours.includes(parseInt(hours))) {
+            $(".event").addClass("future");
         } else {
             $(".event").addClass("past");
         }
