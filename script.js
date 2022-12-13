@@ -6,13 +6,11 @@ $(document).ready(function() {
     let time = moment().format("hh:mm:ss a");
     let hours = moment().format("HH");
     let minutes = moment().format("mm:ss");
-    let event;
+    let event, index, save;
     let events = [{"9": ""}, {"10": ""}, {"11": ""}, {"12": ""}, {"13": ""}, {"14": ""}, {"15": ""}, {"16": ""}, {"17": ""}];
-    var index;
     let correlation = [9, 10, 11, 12, 13, 14, 15, 16, 17];
     let greenHours = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     const eventIds = ["#9", "#10", "#11", "#12", "#13", "#14", "#15", "#16", "#17"];
-    var save;
 
     // gets the time at the users location and calls related functions based on time of day
     function getTime() {
@@ -24,7 +22,7 @@ $(document).ready(function() {
                 $("#currentDay").text(date);
                 localStorage.removeItem("events");
                 getEvents();
-            } 
+            }
             if (minutes == "00:00") {
                 $(".event").removeClass("past present future")
                 setBackground();
